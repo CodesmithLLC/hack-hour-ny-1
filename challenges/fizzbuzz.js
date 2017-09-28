@@ -17,7 +17,40 @@
 //                     16 ]
 
 function fizzbuzz(num) {
-
+// GOAL: return an array from 1 up to num
+// set empty array
+// set a loop that sets to the length of num and increment by 1
+// set the conditions of fizz, buzz, and fizzbuzz,
+    // Use control flow statements to set the conditions
+        // push each satisfied conditions into an new array
+        function fizzbuzz(num) {
+            // GOAL: return an array from 1 up to num
+            // set empty array
+            // set a loop that sets to the length of num and increment by 1
+            // set the conditions of fizz, buzz, and fizzbuzz,
+                // Use control flow statements to set the conditions
+                    // push each satisfied conditions into an new array
+            
+                const newArr = []
+                for(let i = 1; i <= num; i ++) {
+                    if( i % 3 == 0) {
+                      newArr.push('fizz')
+                    }
+                    if( i % 5 == 'buzz') {
+                      newArr.push('buzz')
+                    }
+                    if ( i % 5 ===0  && i % 3 ===0 ) {
+                      newArr.push('fizzbuzz')
+                    }
+                    if ( i % 5 !== 0 && i % 3 !==0 ) {
+                        newArr.push(i)
+                    }
+                    
+                } 
+                return newArr
+            }
+            
+            fizzbuzz(16)
 }
 
 module.exports = fizzbuzz;
