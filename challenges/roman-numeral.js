@@ -18,7 +18,33 @@
  */
 
 function romanNumeral(n) {
-
-}
+    //symbol appears after a larger or equal symbol, it is added
+    //symbol appears before a larger symbol, it is substracted
+    //Don't use same symbol more than 3x in a row
+    if(n < 1) return false
+    
+    const romans = {
+      M: 1000,
+      D: 500,
+      C: 100,
+      L: 50,
+      X: 10,
+      V: 5,
+      I: 1,
+    
+    }
+    
+    romanStr ='',
+    k = undefined;
+    for(k in romans) {
+      while( n >= romans[k]) {
+          console.log(romans[k])
+        romanStr += k
+        n -= romans[k]
+      }
+    }
+    return romanStr
+    
+    }
 
 module.exports = romanNumeral;

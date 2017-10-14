@@ -14,6 +14,25 @@
 */
 
 function drawStairs(n) {
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+// ******
+let string = "";
+for (let i = 1 ; i <= n; i += 1) {
+    for (let spaces = 0; spaces < n-i ;spaces += 1) {
+        string+=" ";
+                    
+    }
+    for (let stars = 0; stars < i ; stars += 1) {
+        string += "*";
+    }
+    
+    console.log( string );
+    string = "";
+    }
 
 }
 
