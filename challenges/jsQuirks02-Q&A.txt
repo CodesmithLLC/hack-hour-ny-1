@@ -1,0 +1,68 @@
+
+Javascript Quirks Quiz #2
+Please do not run the code in your terminal. Think critically about the answer.
+
+
+George 2.0
+
+1) What will be the output of the above code snippet?
+Object {bar: "hello"} / Object {bar: "hello"}	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+undefined / Object {bar: "hello"}
+Object {bar: "hello"} / undefined	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<A ... because JS is broken (since the return in the second code block (foo2) the return is on a line by itself (which JS will brilliantly decide is:   return <undefined> ) )
+undefined / undefined
+
+2) What will be the output of the above code snippet?
+"undefined"
+"object"	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+undefined
+"number"	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<A
+
+3) What will be the output of the above code snippet?
+0.3 / true	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+0.30000000000000004 / true
+0.3 / false
+0.30000000000000004 / false	.	.	.	.	.	.	.	.	.	.	<A   ... today is JS is broken day ...  :-(
+
+4) What will be the output of the above code snippet?
+1, 2, 3, 4
+1, 3, 4, 2
+1, 4, 2, 3
+1, 4, 3, 2	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+
+5) What will be the output of the above code snippet?
+0, 1, 2, 3, 4
+0, 0, 0, 0, 0
+4, 4, 4, 4, 4
+5, 5, 5, 5, 5	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+
+6) What will be the output of the above code snippet?
+"John Doe" / "John Doe"	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+undefined / undefined
+"John Doe" / undefined
+undefined / "John Doe"	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<A due to run-time scoping for functions
+
+7) What will be the output of the above code snippet?
+1	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+2
+undefined
+Error
+
+8) What will be the output of the above code snippet?
+undefined
+3628800	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+Error
+0
+
+9) What will be the output of the above code snippet?
+true / true
+true / false	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<A
+true / false
+false / false	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+
+10) What will be the output of the above code snippet?
+undefined / undefined
+1 / 2
+1 / undefined
+undefined / 2	.	.	.	.	.	.	.	.	.	.	.	.	.	.	<G
+
+

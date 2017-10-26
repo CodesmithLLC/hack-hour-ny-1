@@ -1,0 +1,94 @@
+Quirks 4
+
+
+George 2.0
+
+
+What does this evaluate to? *
+
+True
+False	.	.	.	.	.	.	.	.	.	.	.	AC
+This was actually false, If there was one more 9 and one more 0 it would have hit the upper number limit and would have been true.
+
+
+Which of these is/are false? if any? *
+
+A
+B	.	.	.	.	.	.	.	.	.	.	.	AC
+C
+None
+NaN is the only thing in javascript that isn't equal to itself
+
+
+Which of these is/are false? if any? *
+
+A	.	.	.	.	.	.	.	.	.	.	.	AX
+B	.	.	.	.	.	.	.	.	.	.	.	AC
+C	.	.	.	.	.	.	.	.	.	.	.	AC
+D	.	.	.	.	.	.	.	.	.	.	.	AX
+None
+== will actually flatten an array and turn all values into a string separated by commas
+
+
+What does this evaluate to? *
+
+True	.	.	.	.	.	.	.	.	.	.	.	C
+False	.	.	.	.	.	.	.	.	.	.	.	AX
+== will cause methods inside of an object to be evaluated and the returned value will coerce to a boolean
+
+
+What does the final line do? *
+
+Logs 0
+Logs 1	.	.	.	.	.	.	.	.	.	.	.	AC
+Logs 2
+Logs 3
+Throws an error
+Does nothing
+Void actually works the same way as an iife would. So a closure is created at each value of i thats holds the actual value.
+
+
+Which return false? *
+
+A
+B
+C
+D	.	.	.	.	.	.	.	.	.	.	.	AX
+None.	.	.	.	.	.	.	.	.	.	.	C
+converting any type of whitespace to a number turns it into the number 0
+
+
+Which of these is true? *
+
+A
+B	.	.	.	.	.	.	.	.	.	.	.	AX
+C	.	.	.	.	.	.	.	.	.	.	.	C
+None
+Math.max() returns -Infinity because any value passed into it will always be greater than it. Math.min() does the opposite.
+
+
+Which of these is true? *
+
+A	.	.	.	.	.	.	.	.	.	.	.	AC
+B	.	.	.	.	.	.	.	.	.	.	.	AX
+C	.	.	.	.	.	.	.	.	.	.	.	AC
+None
+True in a math operation will become 1 and false will become 0, but if it is not in a math operation it does not change values
+
+
+What does the second line evaluate to? *
+
+True	.	.	.	.	.	.	.	.	.	.	.	C
+False	.	.	.	.	.	.	.	.	.	.	.	AX
+[0] == ![0]. [0] will first coerce to '0' which will then coerce to 0 which will then coerce to false. and ![0] is coerced to a boolean by the exclamation point making it false.
+
+
+What do these evaluate to? *
+
+"[object Object]", "[object Object][object Object]", "[object Object]", "false", 0, ""
+0, "[object Object]", "[object Object]", "", "false", "[object Object][object Object]"	.	.	.	.	.	.	.	.	.	.	.	C
+"[object Object][object Object]", 0, "[object Object]", "", "false", "[object Object]"
+0, "[object, Object]", "false", "[object Object]", "[object Object][object Object]", ""	.	.	.	.	.	.	.	.	.	.	.	AX
+Crazy type coercion
+
+
