@@ -8,6 +8,30 @@
 
 function Stack() {
   // body...
+  let storage = {};
+  let length = 0;
+  let max = -1;
+
+  let push = val => {
+    if (val > max) max = val;
+    storage[length++] = val;
+  }
+
+  let pop = () => {
+    let val = storage[--length];
+    delete storage[length];
+    return val;
+  }
+
+  let getMax = () => {
+    return Math.max(...Object.values(storage));
+  }
+
+  return {
+    push: push,
+    pop: pop,
+    getMax: getMax
+  } 
 }
 
 module.exports = Stack;

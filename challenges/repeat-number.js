@@ -10,8 +10,14 @@
  *
  */
 
-function repeatNumbers(array) {
+// function repeatNumbers(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array.includes(array[i], i + 1)) return array[i];
+//   }
+// }
 
-}
+function repeatNumbers(nums) {
+  
+} 
 
 module.exports = repeatNumbers;

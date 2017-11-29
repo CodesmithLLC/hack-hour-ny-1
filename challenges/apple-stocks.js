@@ -13,6 +13,32 @@
  */
 
 function bestProfit(stock_prices_yesterday) {
+  /**** first approach, but is very slow ****/
+
+  // let profit = 0;
+  // for (let i = 0; i < stock_prices_yesterday.length-1; i += 1) {
+  //   let bought = stock_prices_yesterday[i];
+  //   for (let j = i + 1; j < stock_prices_yesterday.length; j += 1) {
+  //     let sold = stock_prices_yesterday[j];
+  //     let diff = sold - bought;
+  //     if (bought < sold && diff > profit) {
+  //       profit = diff;
+  //     }
+  //   }
+  // }
+  // return profit;
+
+  let profit = 0;
+  for (let i = 0; i < stock_prices_yesterday.length-1; i += 1) {
+    let bought = stock_prices_yesterday[i];
+    let maxSold = Math.max(...stock_prices_yesterday.slice(i, stock_prices_yesterday.length));
+    let diff = maxSold - bought;
+    
+    if (diff > profit) {
+      profit = diff;
+    }
+  }
+  return profit;
 
 }
 

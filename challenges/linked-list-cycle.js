@@ -33,7 +33,15 @@ var Node = function(value) {
 }
 
 function hasCycle(head) {
-
+  const seen = {};
+  for (let currNode = 0; currNode; currNode = currNode.next) {
+    if (seen.hasOwnProperty(currNode)) {
+      return true;
+    } else {
+      seen[currNode] = true;
+    }
+  }
+  return false;
 }
 
 module.exports = {Node: Node, hasCycle: hasCycle}

@@ -12,8 +12,50 @@
  * numToWords(92120000000000000) -> 'NintyTwoQuadrillionOneHundredTwentyTrillion'
  */
 
-function numToWords(num) {
+function numToWords(num, ind = 0) {
+  let cache = {
+    0: 'Zero',
+    1: 'One',
+    2: 'Two',
+    3: 'Three',
+    4: 'Four',
+    5: 'Five',
+    6: 'Six',
+    7: 'Seven',
+    8: 'Eight',
+    9: 'Nine',
+    10: 'Ten',
+    11: 'Eleven',
+    12: 'Twelve',
+    13: 'Thirteen',
+    14: 'Fourteen',
+    15: 'Fifteen',
+    16: 'Sixteen',
+    17: 'Seventeen',
+    18: 'Eighteen',
+    19: 'Nineteen',
+    20: 'Twenty',
+    30: 'Thirty',
+    40: 'Fourty',
+    50: 'Fifty',
+    60: 'Sixty',
+    70: 'Seventy',
+    80: 'Eighty',
+    90: 'Ninety'
+  }
+  let placeVals = ['', 'Thousand', 'Million', 'Billion', 'Trillion', 'Quadrillion'];
+  let numStr = num.toString();
 
+  if (numStr.length < 3) return cache[numStr];
+  if (numStr.length === 3) return cache[numStr[0]] + 'Hundred' + placeVals[ind++];
+
+  if (numStr.length > 3) {
+    numStr = numStr.split('')
+    let last = numStr.splice(numStr.length - 3, 3).join('');
+    numStr = numStr.join('');
+    return numToWords(Number(numStr), ind, rest);
+
+  }
 }
 
 module.exports = numToWords;

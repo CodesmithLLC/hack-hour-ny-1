@@ -26,7 +26,9 @@
  */
 
 function applyIt(func, args) {
-
+  if (!args.length) return func();
+  return 
 }
 
 module.exports = applyIt;
+

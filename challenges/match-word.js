@@ -8,7 +8,25 @@
 // matchWord('');  -> true
 
 function matchWord(str) {
+  str = str.toLowerCase();
+  let map = [];
+  let word = "";
+  let revWord;
+  for (let i = 0; i < str.length; i += 1) {
+    if ((str.charCodeAt(i) >= 65 &&  str.charCodeAt(i) <= 90) || (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122)) word += str[i];
+    
+    else if (word) {
 
+      revWord = word.split('').reverse().join('');
+      (map[map.length-1] === revWord) ? map.pop() : map.push(word);
+      word = "";
+
+    }
+  }
+  return (map.length) ? false : true;
 }
 
 module.exports = matchWord;
+
+
+
