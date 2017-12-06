@@ -5,8 +5,8 @@
 function twoSum(arr, n) {
   const cache = {};
   for (var i = 0; i < arr.length; i++) {
-    cache[arr[i]] = n - arr[i];
-    if (cache[arr[i]] === arr[i]) return true;
+    if (cache[arr[i]]) return true;
+    cache[n - arr[i]] = 'placeholder';
   }
 
   return false;

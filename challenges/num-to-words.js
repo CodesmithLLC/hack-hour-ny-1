@@ -12,6 +12,8 @@
  * numToWords(92120000000000000) -> 'NintyTwoQuadrillionOneHundredTwentyTrillion'
  */
 
+
+ // http://slides.com/codesmith/deck-20?token=PTOEUtlX#/1
 function numToWords(num) {
 
 }
