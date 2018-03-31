@@ -13,6 +13,8 @@
  */
 
 function numToWords(num) {
+// input num
+//output string
 
 }
 

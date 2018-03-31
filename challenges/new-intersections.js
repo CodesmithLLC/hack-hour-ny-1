@@ -17,8 +17,38 @@
  * 	 
  */
 
-function newIntersections(x, y){
-
+const newIntersections = (x,y) => {
+  //find max
+  let max = Math.max(...x,...y);
+  //find min
+  const min = Math.min(...x,...y);
+  //if min < 0, mod is math.abs min, else 0
+  const mod = min < 0 ? Math.abs(min) : 0;
+  //add 1 and mod to our max
+  max += mod + 1;
+  
+  const outer = [];
+  //create an array of max subarrays, with max length
+  for(let i = 0; i < max; i++) outer.push(new Array(max).fill(`-`));
+  //iterate through all subs and put x in appropriate place
+  for(let i = 0; i < a.length ; i++){
+    outer[b[i] + mod][a[i]] = `x`;
+  }
+  
+  let count = 0;
+  //iterate through again, check left right up down
+  for(let i = 1; i < outer.length - 1; i++){
+    let currRow = outer[i];
+    let prevRow = outer[i - 1];
+    let nextRow = outer[i + 1];
+    for(let j = 1; j < outer[0].length - 1; j++){
+      if(currRow[j - 1] === `x` && currRow[j + 1] === `x` &&
+      prevRow[j] === `x` && nextRow[j] === `x`) count++;
+    }
+  }
+  
+  //return count
+  return count;
 }
 
 module.exports = newIntersections;

@@ -12,7 +12,15 @@
   * console.log(result); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
 
-function anagrams(string) {
+function anagrams(string, built = '', memo = {}) {
+  // Dummy value  for duplicates and when there is no keys
+if(!string) memo[built] = true;
+else {
+  for(let i = 0; i < string.length; i += 1) {
+    anagrams(string.slice(0, i), string.slice(i + 1) ,built + string[i], memo);
+  }
+}
+return Object.keys(memo);
 
 }
 

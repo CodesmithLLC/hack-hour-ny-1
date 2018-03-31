@@ -42,8 +42,39 @@ expectations = {
 
 
 
-function getPINs(observed) {
+var pad = {
+  "1": ['1', '2', '4'],
+  "2": ['1', '2', '3', '5'],
+  "3": ['2', '3', '6'],
+  "4": ['1', '4', '5', '7'],
+  "5": ['2', '4', '5', '6', '8'],
+  "6": ['3', '5', '6', '9'],
+  "7": ['4', '7', '8'],
+  "8": ['5', '7', '8', '9', '0'],
+  "9": ['6', '8', '9'],
+  "0": ['8', '0'],
+};
 
+
+// iterative solution
+// slightly faster
+// http://jsperf.com/observed-pin-hack-hour
+function getPINs(observed) {
+  let possibs = [''];
+  
+  while(observed){
+    let adjacent = pad[observed[0]];
+    let newPossibs = [];
+    for(let i = 0; i < adjacent.length; i++){
+      for(let j = 0; j < possibs.length; j++){
+        newPossibs.push(adjacent[i] + possibs[j]);
+      }
+    }
+    possibs = newPossibs;
+    observed = observed.slice(1)
+  }
+  
+  return possibs
 }
 
 

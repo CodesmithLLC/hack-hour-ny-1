@@ -25,7 +25,26 @@
  */
 
 function balancedParens(input){
-
+  //create map
+  const map = { '{':'}','[':']','(':')' };
+  //instantiate cache
+  const cache = [];
+  let val;
+  //loop through input
+  for(let i = 0; i < input.length; i++){
+    //set a var to input[i]
+    val = input[i];
+    //check if val is in map
+    if(val in map) cache.push(val);
+      //if yes, push to cache
+    //else if val is equal to a right bracket
+    else if(val === ']' || val === '}' || val === ')')
+      //pop cache, check that val to see if it matches
+      //if not, return false
+      if(map[cache.pop()] !== val) return false
+    }
+  //if length cache > 1 return false, else true
+  return !cache.length;
 }
 
 module.exports = balancedParens;

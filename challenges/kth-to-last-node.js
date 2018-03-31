@@ -21,8 +21,28 @@ function Node(val) {
   this.next = null;
 }
 
+// O(n)
 function kthToLastNode(k, head) {
 
+let slowNode = head;
+let fastNode = head;
+// if k is more than len, it becomes null, but if it's e.g 2, it's just 2 ahead of the slowNode that starts at 0;
+// FIND OFFSET FIRST
+for(let i = 0; i < k; i += 1) {
+  fastNode = fastNode.next;
 }
+//If fastNode is not null (exceeding the length), it both nodes will start at their respective positons,
+//fastNode being k ahead of slowNode;
+//START RACE OF HARE/TURTOISE UNTIL HARE REACHES NULL
+while(fastNode) {
+  fastNode = fastNode.next;
+  slowNode = slowNode.next;
+}
+return slowNode.value;
+};
+
+
+
+
 
 module.exports = {Node: Node, kthToLastNode: kthToLastNode};

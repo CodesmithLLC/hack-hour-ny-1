@@ -10,7 +10,21 @@
  *
  */
 function uniqueNumber(array) {
+  return array.reduce((accum, curr) => accum ^ curr);
+}
 
+function uniqueNumber(array) {
+  var store = {};
+  
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] in store) {
+      delete store[array[i]];
+    } else {
+      store[array[i]] = true;
+    }
+  }
+  
+  return Object.keys(store)[0];
 }
 
 module.exports = uniqueNumber;

@@ -13,8 +13,23 @@
 
 */
 
-function drawStairs(n) {
-
+function stairs(n){
+  //init empty String
+  let str = ``;
+  //init two vars, repping num * and num spaces
+  let numAst, numSpace;
+  //for loop, start at 1, i <= n, i++
+  for(let i = 1; i <= n; i++){
+    //set num of spaces to n - i
+    numSpace = n - i;
+    //set num of * to i
+    numAst = i;
+    //concat our string with those characters repeated, append \n
+    str += " ".repeat(numSpace) + `*`.repeat(numAst) + `\n`;
+    
+  };
+  
+  console.log(str)
 }
 
 

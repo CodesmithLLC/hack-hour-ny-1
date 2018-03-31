@@ -21,7 +21,24 @@ eachPermutation([1, 2, 3], function(perm) {
 */
 
 function eachPermutation(arr, callback) {
+  heapsUtil(0);
+  function heapsUtil(index) {
+    if (index === arr.length) {
+      return callback(arr);
+    }
+    for (var j = index; j < arr.length; j++) {
+      swap(arr, index, j);
+      heapsUtil(index + 1);
+      swap(arr, index, j);
+    }
+  }
+}
 
+
+function swap(arr, i, j) {
+  var temp = arr[j];
+  arr[j] = arr[i];
+  arr[i] = temp;
 }
 
 

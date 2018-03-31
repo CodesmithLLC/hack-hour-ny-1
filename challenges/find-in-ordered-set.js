@@ -11,7 +11,21 @@ findInOrderedSet(nums, 2);  -> false
 
 
 function findInOrderedSet(arr, target) {
-
+  
+  //declare our helper binSearch
+  function binSearch(start,end){
+    //find middle index
+    const mid = Math.floor((start + end)/2);
+    //check if value at middle index is === target ? return true
+    if(arr[mid] === target) return true;
+    //check if the start index === end ? return false
+    else if(start === end) return false;
+    //recursive call to helper function
+      //check value of the arr[middle] and target, to determine params to pass in
+    else return arr[mid] > target ? binSearch(start, mid - 1) : binSearch(mid + 1, end)
+  }
+  //return binSearch()
+  return binSearch(0, arr.length - 1);
 }
 
 
