@@ -15,10 +15,78 @@
 function Node(val) {
   this.value = val;
   this.next = null;
+
 }
+
+class ll {
+	constructor(vale){
+	this.next = null;
+	this.head = null;
+	this.length = 0;
+	}
+
+add(value) {
+	if(this.head){
+     
+	  let currentNode = this.head;
+	  for (let i = 1; i < this.length; i += 1) {
+	    currentNode = currentNode.next;
+	  }
+	  
+	  //   Either way, after getting the currentNode === the "tail", we then add the new Node
+	  currentNode.next = new Node(value);
+	  console.log( currentNode );
+	}
+	else {
+	  this.head = new Node(value);
+	  console.log( this.head );
+	}
+	//this.head= "javi";
+	this.length += 1;
+ }
+}
+
 
 function addLinkedList(l1, l2) {
 
+
+	if(this.head){
+     
+	  let currentNode = this.head;
+	  for (let i = 1; i < this.length; i += 1) {
+	    currentNode = currentNode.next;
+	  }
+	  
+	  //   Either way, after getting the currentNode === the "tail", we then add the new Node
+	  currentNode.next = new Node(value);
+	  console.log( currentNode );
+	}
+	else {
+	  this.head = new Node(value);
+	  console.log( this.head );
+	}
+	//this.head= "javi";
+	this.length += 1;
+
+
 }
+
+
+
+
+let l1 = new ll();
+l1.add(2);
+l1.add(1);
+l1.add(5);
+
+
+let l2 = new ll();
+l2.add(5);
+l2.add(9);
+l2.add(2);
+
+
+ // Input: (2 -> 1 -> 5) + (5 -> 9 -> 2)
+console.log(  l1, l2 );
 
 module.exports = {Node: Node, addLinkedList: addLinkedList};

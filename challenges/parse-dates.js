@@ -40,7 +40,63 @@
 // - if any part of the date string is missing then you can consider it an invalid date
 
 function parseDates(str) {
-  
+// Example strings:
+// Thursday 12:37 PM
+// Nov 19th 1:12 PM
+// Mar 1st 6:09 PM
+// Monday 5:33 PM
+// Friday 7:04 PM
+// Today 2:01 PM
+
+	let s = str.split();
+	console.log(s);
+
+// get either the month or the day from the first word
+
+// if is a month now get the next number of the day.
+// then get the time
+//return the formated date
+
+//if you got the day then get the day from this last week
+// now get the time
+//return the formated date
+
+// if the first word is "today" then get todays date but add the next element tha is the time 
+//if no time is received then return undefined
+//otherwiese return the formated date
+
+
+// return undefined if none of these requirements were found
+
+
+
+/*
+The 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order:
+var d = new Date(99, 5, 24, 11, 33, 30, 0);
+var d = new Date("October 13, 2014 11:13:00");
+document.getElementById("demo").innerHTML = d.toString();
+
+The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+var d = new Date("2015-03-25");
+*/
+
+
+// Example input, assuming the current Date is Thursday December 17, 2015:
+// parseDates('Jan 12th 1:09 AM')  => returns new Date object representing 'Mon Jan 12 2015 01:09:00 GMT-0800 (PST)'
+// parseDates('Today 8:15 PM')     => returns new Date object representing 'Thu Dec 17 2015 20:15:00 GMT-0800 (PST)'
+// parseDates('Sunday 12:59 PM')   => returns new Date object representing 'Sun Dec 13 2015 12:59:00 GMT-0800 (PST)'
+
+
 }
+
+function getDay(str){
+
+
+}
+function getMonth(str){
+
+
+}
+
 
 module.exports = parseDates;

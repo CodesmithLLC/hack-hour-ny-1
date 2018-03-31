@@ -18,6 +18,7 @@
  */
 
 function newIntersections(x, y){
+//didt get this farr to understanding the question
 
 }
 

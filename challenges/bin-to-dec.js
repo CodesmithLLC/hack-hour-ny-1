@@ -14,7 +14,26 @@
  */
 
 function binToDec(binary) {
+	if(binary.charAt(0)=="0"){
+		binary=binary.substring(1);
+	}
+	//traverse the array from the left to right
+	//this allows to calculate the exponetial value
+	//for 2^x power
+	let temp=0;
+	size=binary.length;
+	for( let i=size-1 ; i>= 0 ; i-- )
+	{
+	    if( binary[i]==1  ){//console.log(1 )  
+	        
+	        temp+=Math.pow(2, ((size-1)-i)  )
+	        console.log(temp)
+	      
+	    }
+	}
+	
+	
+return temp;
 
-}
 
 module.exports = binToDec;

@@ -1,7 +1,8 @@
 /**
  *  Circle Country is a country that contains several circular-shaped districts.
  *  Some districts may be situated inside other districts, but their borders do not intersect or touch.
- *  Tyus is a resident of Circle Country. When he travels between two locations, he always tries to cross the fewest number of district borders as possible.
+ *  Tyus is a resident of Circle Country. When he travels between two locations, he always tries to cross the fewest
+  number of district borders as possible.
  *
  *  You are given an array x, an array y, and an array r
  *
@@ -12,7 +13,8 @@
  *    - (start_x, start_y) are Tyus' starting coordinates and (end_x, end_y) are Tyus' destination coordinates
  *
  *
- *  Write an efficient algorithm for finding the minimum number of district borders Tyus must cross in order to get from
+ *  Write an efficient algorithm for finding the minimum number 
+ of district borders Tyus must cross in order to get from
  *  (start_x, start_y) to (end_x, end_y)
  *
  *  Constraints:
@@ -23,6 +25,12 @@
  */
 
 function circleCountry(x, y, r, start_x, start_y, end_x, end_y) {
+
+	// find all coordinates that have the same coordinates to each other
+	// this implies these districts are bounded to each other hence there is a connecting path
+	// we then travese through these paths to find the minimun amount of connections it takes to 
+	// get the destination
+	// we upate our counter and then we return the least amount of paths it takes to get to the destination
 
 }
 

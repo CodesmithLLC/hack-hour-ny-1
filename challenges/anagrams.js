@@ -13,6 +13,8 @@
   */
 
 function anagrams(string) {
+//very long solution to think about
+
 
 }
 

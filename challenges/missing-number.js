@@ -25,7 +25,24 @@ Challange:
   ** cannot use additional storage, variables are okay not any TYPE of object
   ** keep in mind time complexity
 */
-function missingNum(Array) {
+function missingNum(arr) {
+	let result = 0;
+	let len =  arr.length
+	let sum = 0;
+	console.log("len:", len)
+	//use guasess progresive addition to get the toatl of sum number from 1-> n
+	let gpa = ((len+1)*(len + 2)) /2
+	//loop through the array and get the sum of all the numbers
+	for (let i = 0; i < len; i++) {
+		
+		gpa -= arr[i];
+	}
+	console.log("sum and gpa", sum, gpa);
+	//subtract the sum of numbers from the given array
+	result = Math.abs( sum - gpa );               
+	//convert that difference into an absolute number
+	//return that number
+	return gpa;
 }
-
+console.log( "the missing number is", missingNum(  [ 1,2,3,5]  ) );
 module.exports = missingNum;

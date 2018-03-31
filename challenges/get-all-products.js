@@ -10,7 +10,34 @@
  */
 
 function getAllProducts(array) {
-
+	//create and empty array called results
+	let newarray = [];
+	//temp variable
+	let temp;
+	//Loop through the array 	
+	for (var i = 0 ; i<  array.length ; i++) {
+		//assign the temp variable
+		temp = array[0];
+		
+		// loop through every array again
+		for (var j = 0; j < array.length; j++) {
+			
+				//exlude for each current  index of the outer loop
+				if( i != j   ){ 
+					// 	multiple all numbers and store it on temp variable
+					temp =  temp *array[j];
+				 } 
+			
+		}
+		// and store this number in the newarray at index i of the outter loop
+		newarray[i] = temp;
+	}
+	
+	
+	// return new array
+	console.log(newarray )
+	return newarray;
 }
 
+getAllProducts([1, 7, 3, 4]);
 module.exports = getAllProducts;
