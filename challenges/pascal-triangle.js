@@ -33,7 +33,16 @@
 */
 
 function pascalTriangle(numRows) {
-
+  let container = [];
+  //numRows = length of the array
+  let count = 0;
+  while(count<numRows){
+    let subArray = [];
+    //push numbers into subArray
+    count++;
+    subArray.push(container);
+  }
+  return container;
 }
 
 module.exports = pascalTriangle;

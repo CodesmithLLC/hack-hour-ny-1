@@ -4,7 +4,8 @@
 
 
 function Stack() {
-
+ let stac1 = [];
+ let stac2 = [];
 }
 
 
@@ -14,7 +15,8 @@ function Stack() {
 
 
 function Queue() {
-
+ this.enqueue
+ this.dequeue
 }
 
 module.exports = {Stack: Stack, Queue: Queue};

@@ -23,9 +23,28 @@
  *
  *
  */
+// I know this is recursion! But not sure how to implement it
 
 function balancedParens(input){
-
+    //check to see if each character matches ascii code
+    let tracker = 0;
+    for(let i = 0; i<input.length; i++){
+        let str=input.charCodeAt(i);
+        if(str===40){
+            tracker++;
+        }else if(str===41){
+            tracker++;
+        }else if(str===123){
+            tracker++;
+        }else if(str===125){
+            tracker++;
+        }else if(str===91){
+            tracker++
+        }else if(str===93){
+            tracker++;
+        }
+    }
+    return tracker%2 === 0;
 }
 
 module.exports = balancedParens;

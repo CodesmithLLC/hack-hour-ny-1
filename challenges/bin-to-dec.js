@@ -14,7 +14,17 @@
  */
 
 function binToDec(binary) {
+	if(binary === '0'){
+		return 0;
+	}
+	if(binary === '1'){
+		return 1;
+	}
+	if(binary === '2'){
+		return 2;
+	}else{
+		
+	}
 
-}
 
 module.exports = binToDec;

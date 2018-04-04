@@ -16,7 +16,15 @@ function isSubstring(s1, s2) {
 }
 
 function stringRotation(s1, s2) {
-
+  if(s1[0]!==s2[0]){
+    for(var i = 0; i<s1.length; i++){
+      if(s2[i]===s1[0]){
+        //shift the letter to the front until that letter matches the start of the first letter in the string
+      }
+    }
+  }else if(s1[0] === s2[0]&&s1[s1.length-1] === s2[s2.length-1]){
+    return isSubstring(s1,s2);
+  }
 }
 
 module.exports = {isSubstring: isSubstring, stringRotation: stringRotation};

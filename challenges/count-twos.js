@@ -8,7 +8,22 @@
 
 
 function countTwos(num) {
-
-}
+  let start = 2;
+  let arr = [];
+  if(num<start){
+      return 0;
+  }else{
+    while(start<=num){
+      if(start.toString().includes('2')){
+        arr.push(...start.toString().split(''));
+      }
+      start++
+    }
+  }
+   return arr.filter(function(item){
+     return item === '2';
+   }).length
+ }
+ 
 
 module.exports = countTwos;

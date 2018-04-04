@@ -9,7 +9,8 @@
  * Extra:
  * How would you solve this problem if a temporary buffer is not allowed?
  */
-
+//create linked list --> head and tail values
+//create node with value and next properties
 
 
 function deleteDups(head) {

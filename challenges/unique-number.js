@@ -10,7 +10,19 @@
  *
  */
 function uniqueNumber(array) {
-
+  let obj = array.reduce(function(o,n){
+    if(o[n] === undefined){
+      o[n]=1;
+    }else{
+      o[n]++
+    }
+    return o;
+  },{});
+  for(var key in obj){
+    if(obj[key]===1){
+      return parseInt(key);
+    }
+  }
 }
 
 module.exports = uniqueNumber;

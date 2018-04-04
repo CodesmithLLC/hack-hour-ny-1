@@ -13,7 +13,8 @@
   */
 
 function anagrams(string) {
-
+  let results = [string];
+  for(let i = )
 }
 
 module.exports = anagrams;
